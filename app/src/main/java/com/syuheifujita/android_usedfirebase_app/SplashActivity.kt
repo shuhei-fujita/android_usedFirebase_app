@@ -1,8 +1,10 @@
 package com.syuheifujita.android_usedfirebase_app
 
+import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_splash.*
 
@@ -20,7 +22,14 @@ class SplashActivity : AppCompatActivity() {
 
         //フォントを変更
         //assetsにfontデータを格納
-        val typeFace: Typeface = Typeface.createFromAsset(assets, "asset_font_carbonblock.ttf")
-        tv_app_name.typeface = typeFace
+//        val typeFace: Typeface = Typeface.createFromAsset(assets, "asset_font_carbonblock.ttf")
+//        tv_app_name.typeface = typeFace
+
+        //一定時間経過した後次の画面に移動
+        //handlerを使う
+        Handler().postDelayed({
+            startActivity(Intent(this, IntroActivity::class.java))
+            finish()
+        },2000)
     }
 }
