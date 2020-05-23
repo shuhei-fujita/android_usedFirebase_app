@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<!--    splash-->
+<!--    Splash-->
     <dimen name="splash_title_text_size">40sp</dimen>
 
-<!--    intro-->
+<!--    Intro-->
     <dimen name="intro_title_text_size">40sp</dimen>
     <dimen name="lets_get_started_text_size">25sp</dimen>
     <dimen name="intro_text_size">16sp</dimen>
     <dimen name="btn_text_size">18sp</dimen>
+
+<!--    Sign Up Activity-->
+    <dimen name="toolbar_title_text_size">18sp</dimen>
+    <dimen name="authentication_description_text_size">16sp</dimen>
+    <dimen name="et_text_size">16sp</dimen>
+    <dimen name="cv_corner_radius">10dp</dimen>
 
 </resources>
