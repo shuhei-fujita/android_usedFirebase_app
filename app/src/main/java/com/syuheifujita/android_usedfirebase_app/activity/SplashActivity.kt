@@ -1,12 +1,11 @@
-package com.syuheifujita.android_usedfirebase_app
+package com.syuheifujita.android_usedfirebase_app.activity
 
 import android.content.Intent
-import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import kotlinx.android.synthetic.main.activity_splash.*
+import com.syuheifujita.android_usedfirebase_app.R
 
 class SplashActivity : AppCompatActivity() {
 

@@ -1,9 +1,10 @@
-package com.syuheifujita.android_usedfirebase_app
+package com.syuheifujita.android_usedfirebase_app.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.syuheifujita.android_usedfirebase_app.R
 import kotlinx.android.synthetic.main.activity_intro.*
 
 class IntroActivity : AppCompatActivity() {

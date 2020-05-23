@@ -1,7 +1,8 @@
-package com.syuheifujita.android_usedfirebase_app
+package com.syuheifujita.android_usedfirebase_app.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.syuheifujita.android_usedfirebase_app.R
 
 class MainActivity : AppCompatActivity() {
 

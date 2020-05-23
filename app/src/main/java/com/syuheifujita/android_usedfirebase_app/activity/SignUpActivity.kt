@@ -1,8 +1,9 @@
-package com.syuheifujita.android_usedfirebase_app
+package com.syuheifujita.android_usedfirebase_app.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import com.syuheifujita.android_usedfirebase_app.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
