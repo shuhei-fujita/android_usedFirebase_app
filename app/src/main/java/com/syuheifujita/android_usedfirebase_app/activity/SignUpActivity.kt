@@ -7,6 +7,8 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.syuheifujita.android_usedfirebase_app.R
+import com.syuheifujita.android_usedfirebase_app.firebase.FirestoreClass
+import com.syuheifujita.android_usedfirebase_app.model.UserModel
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : BaseActivity() {
@@ -21,6 +23,15 @@ class SignUpActivity : BaseActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+    }
+
+    fun userRegisteredSuccess() {
+        Toast.makeText(this, "you have succucefly registered", Toast.LENGTH_SHORT)
+            .show()
+        hideProgressDialog()
+
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
 
     private fun setUpActionBar() {
@@ -55,11 +66,8 @@ class SignUpActivity : BaseActivity() {
                     if (task.isSuccessful) {
                         val firebaseUser : FirebaseUser = task.result!!.user!!
                         val registerEmail = firebaseUser.email!!
-                        Toast.makeText(this, "$name you have " +
-                                "succucefly registered the email " +
-                                "address $registerEmail", Toast.LENGTH_SHORT).show()
-                        FirebaseAuth.getInstance().signOut()
-                        finish()
+                        val user = UserModel(firebaseUser.uid, name, registerEmail)
+                        FirestoreClass().registerUser(this, user)
                     } else {
                         Toast.makeText(this,
                             task.exception!!.message, Toast.LENGTH_SHORT).show()
